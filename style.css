@@ -5,9 +5,9 @@
 }
 body {
   font-family: sans-serif;
-  background: #ffffff;
+  background: #fff;
   color: #111;
-  transition: background 0.3s, color 0.3s;
+  transition: all 0.3s;
 }
 .navbar {
   background: #fff;
@@ -48,10 +48,6 @@ body {
   color: #111;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  transition: background 0.2s;
-}
-.nav-links a:hover {
-  background: #f0f0f0;
 }
 .nav-actions {
   display: flex;
@@ -72,7 +68,6 @@ body {
 }
 .theme-toggle {
   cursor: pointer;
-  position: relative;
   width: 32px;
   height: 32px;
   display: flex;
@@ -93,8 +88,6 @@ body {
   width: 24px;
   height: 24px;
   stroke: #111;
-  stroke-width: 2;
-  stroke-linecap: round;
 }
 .main-content {
   max-width: 1200px;
@@ -112,7 +105,6 @@ body {
   border: 1px solid #ddd;
   padding: 30px 40px;
   border-radius: 6px;
-  background: transparent;
   transition: box-shadow 0.2s;
 }
 .feature-card:hover {
