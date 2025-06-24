@@ -111,19 +111,6 @@ body {
   position: absolute;
   transition: opacity 0.3s;
 }
-.sun-icon {
-  opacity: 0;
-}
-.moon-icon {
-  opacity: 1;
-  border-radius: 50%;
-}
-[data-theme="dark"] .sun-icon {
-  opacity: 1;
-}
-[data-theme="dark"] .moon-icon {
-  opacity: 0;
-}
 .mobile-menu-label {
   display: none;
   cursor: pointer;
@@ -180,6 +167,7 @@ body {
   border-radius: 6px;
   background: #ffffff;
   transition: box-shadow 0.2s;
+  background-color: transparent;
 }
 .feature-card:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

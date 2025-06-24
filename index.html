@@ -72,18 +72,69 @@
     </main>
 
     <script>
-        let savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-            document.documentElement.setAttribute("data-theme", savedTheme);
+        let getValue = localStorage.getItem("theme");
+        if (getValue == "dark") {
+            dark()
+        }
+        else {
+            light()
         }
 
         function black() {
-            let html = document.documentElement;
-            let currentColor = html.getAttribute("data-theme") || "light";
-            let newColor = currentColor == "light" ? "dark" : "light";
+            if (localStorage.getItem("theme") == "dark") {
+                light()
+                localStorage.setItem("theme", "light")
+            }
+            else {
+                dark()
+                localStorage.setItem("theme", "dark")
+            }
+        }
 
-            html.setAttribute("data-theme", newColor);
-            localStorage.setItem("theme", newColor);
+        function dark() {
+            document.body.style.backgroundColor = 'rgb(3, 3, 20)'
+
+            let nav = document.querySelector('.navbar')
+            nav.style.backgroundColor = 'rgb(3, 3, 20)'
+            nav.style.borderBottom = '2px solid #374151';
+
+            document.querySelector('.logo').style.color = 'white'
+
+            document.querySelector('.sun-icon').style.display = 'block';
+            document.querySelector('.moon-icon').style.display = 'none';
+
+            let links = document.querySelectorAll('.nav-links li a')
+            links.forEach((e)=> {
+                e.style.color = 'white'
+            })
+
+            let cards = document.querySelectorAll('.feature-card h3, p')
+            cards.forEach((e)=> {
+                e.style.color = 'white'
+            })
+        }
+
+        function light() {
+            document.body.style.backgroundColor = 'white'
+
+            let nav = document.querySelector('.navbar')
+            nav.style.backgroundColor = 'white'
+            nav.style.borderBottom = '2px solid rgb(190, 190, 190)';
+
+            document.querySelector('.logo').style.color = 'black'
+
+            document.querySelector('.sun-icon').style.display = 'none';
+            document.querySelector('.moon-icon').style.display = 'block';
+
+            let links = document.querySelectorAll('.nav-links li a')
+            links.forEach((e)=> {
+                e.style.color = 'black'
+            })
+
+            let cards = document.querySelectorAll('.feature-card h3, p')
+            cards.forEach((e)=> {
+                e.style.color = 'black'
+            })
         }
     </script>
 </body>
