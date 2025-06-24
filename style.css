@@ -116,7 +116,6 @@ body {
 }
 .moon-icon {
   opacity: 1;
-  background-color: black;
   border-radius: 50%;
 }
 [data-theme="dark"] .sun-icon {
