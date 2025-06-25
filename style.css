@@ -118,7 +118,7 @@ body {
 }
 [data-theme="dark"] .navbar {
   background: #111827;
-  border-bottom-color: 1px solid #374151;
+  border-bottom: 1px solid #374151;
 }
 [data-theme="dark"] .logo,
 [data-theme="dark"] .nav-links a,
